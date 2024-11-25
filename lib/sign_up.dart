@@ -1,16 +1,16 @@
-import 'package:ecommerce_app/sign_up.dart';
+import 'package:ecommerce_app/login.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   bool _obscureText = true;
-
+  bool _obscureText_confirm = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +25,10 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // title
                 SizedBox(
-                  height: 150,
+                  height: 120,
                   width: MediaQuery.of(context).size.width*0.5,
                   child: Text(
-                    "Welcome Back!",
+                    "Create an account!",
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
@@ -52,38 +52,76 @@ class _LoginScreenState extends State<LoginScreen> {
                 TextField(
                   obscureText: _obscureText,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.lock_outline),
-                    hintText: "Password",
-                    filled: true,
-                    fillColor: Colors.grey[200],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    suffixIcon: IconButton (
-                      icon: _obscureText ? Icon(Icons.visibility_off): Icon(Icons.visibility),
-                      onPressed: () {
-                        setState(() {
-                          _obscureText = !_obscureText;
-                        });
-                      },
-                    )
-                  ),
-                ),
-                SizedBox(height: 5,),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    child:Text (
-                      "Forgot Password?",
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.red,
+                      prefixIcon: Icon(Icons.lock_outline),
+                      hintText: "Password",
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                    ),
-                    onPressed: () {},
+                      suffixIcon: IconButton (
+                        icon: _obscureText ? Icon(Icons.visibility_off): Icon(Icons.visibility),
+                        onPressed: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
+                      )
                   ),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(height: 35,),
+                TextField(
+                  obscureText: _obscureText_confirm,
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock_outline),
+                      hintText: "Confirm Password",
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      suffixIcon: IconButton (
+                        icon: _obscureText_confirm ? Icon(Icons.visibility_off): Icon(Icons.visibility),
+                        onPressed: () {
+                          setState(() {
+                            _obscureText_confirm = !_obscureText_confirm;
+                          });
+                        },
+                      )
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "By clicking the ",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.black,
+                          )
+                        ),
+                        TextSpan(
+                        text: "Register",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.red,
+                          )
+                        ),
+                        TextSpan(
+                          text: " button, you agree to the public offer",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.black,
+                          )
+                        ),
+                      ]
+                    ),
+                  ),
+                ),
+                SizedBox(height: 25,),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -96,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     child: Text(
-                      "Login",
+                      "Create Account",
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.white,
@@ -105,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 60,),
+                SizedBox(height: 40,),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -141,19 +179,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Text("Create An Account", style: TextStyle(fontSize: 14, color: Colors.black),),
                         TextButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
-                          },
-                          child: Text (
-                            "Sign up",
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.red,
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.red,
-                              decorationThickness: 1.5,
-                            ),
-                          )
+                            onPressed: () {
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                            },
+                            child: Text (
+                              "Log in",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.red,
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.red,
+                                decorationThickness: 1.5,
+                              ),
+                            )
                         )
                       ],
                     )
