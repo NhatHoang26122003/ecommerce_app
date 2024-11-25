@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/login.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_app/app_color.dart' as AppColor;
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -16,7 +17,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center (
           child: SingleChildScrollView(
             padding: EdgeInsets.symmetric( horizontal: 20),
             child: Column(
@@ -24,9 +24,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // title
-                SizedBox(
-                  height: 120,
-                  width: MediaQuery.of(context).size.width*0.5,
+                Container(
+                  padding: EdgeInsets.only(top: 20),
+                  height: 150,
+                  width: MediaQuery.of(context).size.width*0.6,
                   child: Text(
                     "Create an account!",
                     style: TextStyle(
@@ -90,7 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       )
                   ),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(height: 15,),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: RichText(
@@ -107,7 +108,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         text: "Register",
                           style: TextStyle(
                             fontSize: 14,
-                            color: Colors.red,
+                            color: AppColor.titleButtonColor,
                           )
                         ),
                         TextSpan(
@@ -127,7 +128,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                      backgroundColor: AppColor.titleButtonColor,
                       padding: EdgeInsets.symmetric(vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
@@ -156,7 +157,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         // Google
                         InkWell(
                           onTap: () {
-                            print ("Google Sign In");
                           },
                           child: Image.asset("assets/images/Google.png", fit: BoxFit.contain,),
                         ),
@@ -180,15 +180,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Text("Create An Account", style: TextStyle(fontSize: 14, color: Colors.black),),
                         TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                             },
                             child: Text (
                               "Log in",
                               style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.red,
+                                color: AppColor.titleButtonColor,
                                 decoration: TextDecoration.underline,
-                                decorationColor: Colors.red,
+                                decorationColor: AppColor.titleButtonColor,
                                 decorationThickness: 1.5,
                               ),
                             )
@@ -201,7 +201,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }

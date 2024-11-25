@@ -1,5 +1,7 @@
+import 'package:ecommerce_app/forgot_password.dart';
 import 'package:ecommerce_app/sign_up.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_app/app_color.dart' as AppColor;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,7 +18,6 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center (
           child: SingleChildScrollView(
             padding: EdgeInsets.symmetric( horizontal: 20),
             child: Column(
@@ -24,9 +25,10 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // title
-                SizedBox(
+                Container(
+                  padding: EdgeInsets.only(top: 20),
                   height: 150,
-                  width: MediaQuery.of(context).size.width*0.5,
+                  width: MediaQuery.of(context).size.width*0.6,
                   child: Text(
                     "Welcome Back!",
                     style: TextStyle(
@@ -69,18 +71,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ),
                 ),
-                SizedBox(height: 5,),
+                SizedBox(height: 10,),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    child:Text (
+                    child: Text (
                       "Forgot Password?",
                       style: TextStyle(
                         fontSize: 13,
-                        color: Colors.red,
+                        color: AppColor.titleButtonColor,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordScreen()));
+                    },
                   ),
                 ),
                 SizedBox(height: 30,),
@@ -89,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                      backgroundColor: AppColor.titleButtonColor,
                       padding: EdgeInsets.symmetric(vertical: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
@@ -117,9 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         // Google
                         InkWell(
-                          onTap: () {
-                            print ("Google Sign In");
-                          },
+                          onTap: () {},
                           child: Image.asset("assets/images/Google.png", fit: BoxFit.contain,),
                         ),
                         SizedBox(width: 10),
@@ -142,15 +144,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text("Create An Account", style: TextStyle(fontSize: 14, color: Colors.black),),
                         TextButton(
                           onPressed: () {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
                           },
                           child: Text (
                             "Sign up",
                             style: TextStyle(
                               fontSize: 14,
-                              color: Colors.red,
+                              color: AppColor.titleButtonColor,
                               decoration: TextDecoration.underline,
-                              decorationColor: Colors.red,
+                              decorationColor: AppColor.titleButtonColor,
                               decorationThickness: 1.5,
                             ),
                           )
@@ -163,7 +165,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }

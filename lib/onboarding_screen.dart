@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/login.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_app/app_color.dart' as AppColor;
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -119,14 +120,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               );
             }
                 : () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => LoginScreen())
               );
             },
             child: Text(
               _currentPage < 2 ? "Next" : "Get Started",
-              style: const TextStyle(color: Colors.red, fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(color: AppColor.titleButtonColor, fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
         ],

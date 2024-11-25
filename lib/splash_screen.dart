@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text (
               "Stylish",
               style: TextStyle(
-                color: Colors.pinkAccent,
+                color: AppColor.titleButtonColor,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'LibreCaslonText',
                 fontSize: 30,
