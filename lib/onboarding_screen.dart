@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/login.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -118,7 +119,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               );
             }
                 : () {
-              // Logic cho trang cuối cùng (VD: navigate đến trang chính)
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen())
+              );
             },
             child: Text(
               _currentPage < 2 ? "Next" : "Get Started",
