@@ -38,6 +38,10 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 decoration: InputDecoration(
                     prefixIcon: Icon(Icons.email_outlined),
                     hintText: "Enter your email address",
+                    hintStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                     filled: true,
                     fillColor: Colors.grey[200],
                     border: OutlineInputBorder(

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/login.dart';
+import 'package:ecommerce_app/screen/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -42,6 +42,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person_outline),
                     hintText: "Username or Email",
+                    hintStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                     filled: true,
                     fillColor: Colors.grey[200],
                     border: OutlineInputBorder(
@@ -55,6 +59,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock_outline),
                       hintText: "Password",
+                      hintStyle: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal,
+                      ),
                       filled: true,
                       fillColor: Colors.grey[200],
                       border: OutlineInputBorder(
@@ -76,6 +84,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock_outline),
                       hintText: "Confirm Password",
+                      hintStyle: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal,
+                      ),
                       filled: true,
                       fillColor: Colors.grey[200],
                       border: OutlineInputBorder(

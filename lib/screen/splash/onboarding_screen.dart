@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/login.dart';
+import 'package:ecommerce_app/screen/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -99,14 +99,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: List.generate(
                 3,
                 (index) => AnimatedContainer(
-                  duration: const Duration(milliseconds: 300), // Hiệu ứng động
+                  duration: const Duration(milliseconds: 300),
                   margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                  width: _currentPage == index ? 32.0 : 8.0, // Tăng kích thước khi active
-                  height: 8.0, // Giữ chiều cao không đổi
+                  width: _currentPage == index ? 32.0 : 8.0,
+                  height: 8.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
                     shape: BoxShape.rectangle,
-                    color: _currentPage == index ? Colors.black : Colors.grey, // Màu khi active
+                    color: _currentPage == index ? Colors.black : Colors.grey,
                   ),
                 ),
               ),

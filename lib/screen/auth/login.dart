@@ -1,5 +1,6 @@
-import 'package:ecommerce_app/forgot_password.dart';
-import 'package:ecommerce_app/sign_up.dart';
+import 'package:ecommerce_app/screen/auth/forgot_password.dart';
+import 'package:ecommerce_app/screen/auth/get_started.dart';
+import 'package:ecommerce_app/screen/auth/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -24,7 +25,6 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // title
                 Container(
                   padding: EdgeInsets.only(top: 20),
                   height: 150,
@@ -43,6 +43,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.person_outline),
                     hintText: "Username or Email",
+                    hintStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                     filled: true,
                     fillColor: Colors.grey[200],
                     border: OutlineInputBorder(
@@ -56,6 +60,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.lock_outline),
                     hintText: "Password",
+                    hintStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                    ),
                     filled: true,
                     fillColor: Colors.grey[200],
                     border: OutlineInputBorder(
@@ -91,7 +99,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => GetStartedScreen()));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColor.titleButtonColor,
                       padding: EdgeInsets.symmetric(vertical: 15),
