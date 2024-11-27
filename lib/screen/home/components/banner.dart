@@ -63,22 +63,22 @@ class _BannerPageViewState extends State<BannerPageView> {
                         SizedBox(
                           width: 130,
                           child: ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.symmetric(horizontal: 10),
-                                  side: BorderSide(color: Colors.white,),
-                                  backgroundColor: Colors.transparent,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  )
-                              ),
-                              child: Row(
-                                children: [
-                                  Text(banner[index].buttonText, style: TextStyle(fontSize: 15, color: Colors.white),),
-                                  SizedBox(width: 4,),
-                                  Icon(Icons.arrow_right_alt, color: Colors.white, size: 20,)
-                                ],
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              side: BorderSide(color: Colors.white,),
+                              backgroundColor: Colors.transparent,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
                               )
+                            ),
+                            child: Row(
+                              children: [
+                                Text(banner[index].buttonText, style: TextStyle(fontSize: 15, color: Colors.white),),
+                                SizedBox(width: 4,),
+                                Icon(Icons.arrow_right_alt, color: Colors.white, size: 20,)
+                              ],
+                            )
                           ),
                         ),
                       ],
