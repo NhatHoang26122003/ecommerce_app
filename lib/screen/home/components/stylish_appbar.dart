@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 
 class StylishAppbar extends StatelessWidget {
@@ -20,7 +21,7 @@ class StylishAppbar extends StatelessWidget {
               SizedBox(
                 height: 30,
                 width: 30,
-                child: Image.asset("assets/images/logo.png", fit: BoxFit.contain,),
+                child: Image.asset(Localfiles.logo, fit: BoxFit.contain,),
               ),
               SizedBox(width: 5,),
               Text(
@@ -35,7 +36,7 @@ class StylishAppbar extends StatelessWidget {
           ),
           InkWell(
             onTap: (){},
-            child: Image.asset("assets/images/avatar.png"),
+            child: Image.asset(Localfiles.avatar),
           )
         ],
       )

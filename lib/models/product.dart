@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/utils/localfiles.dart';
 
 class Product {
   String name;
@@ -29,7 +30,7 @@ class Product {
       discountPercent: 40,
       rating: 4.5,
       reviews: 56890,
-      imagePath: "assets/images/dealList_1.png"
+      imagePath: Localfiles.dealList1,
     ),
     Product (
       name: "HRX by Hrithik Roshan",
@@ -39,7 +40,7 @@ class Product {
       discountPercent: 50,
       rating: 4.5,
       reviews: 344567,
-      imagePath: "assets/images/dealList_2.png",
+      imagePath: Localfiles.dealList2,
     ),
     Product (
       name: "HRX by Hrithik Roshan",
@@ -49,7 +50,7 @@ class Product {
       discountPercent: 50,
       rating: 5,
       reviews: 123456,
-      imagePath: "assets/images/dealList_1.png"
+      imagePath: Localfiles.dealList1,
     ),
   ];
   static List<Product> trendingProducts = [
@@ -58,21 +59,21 @@ class Product {
       price: 1500,
       originalPrice: 2499,
       discountPercent: 40,
-      imagePath: "assets/images/iwc.png"
+      imagePath: Localfiles.iwc,
     ),
     Product (
       name: "Labbin White Sneakers For Men and Female",
       price: 2499,
       originalPrice: 4999,
       discountPercent: 50,
-      imagePath: "assets/images/sneaker.png",
+      imagePath: Localfiles.sneaker,
     ),
     Product (
       name: "Mammon Women's Handbag (Set of 3, Beige)",
       price: 2499,
       originalPrice: 4999,
       discountPercent: 50,
-      imagePath: "assets/images/handpad.png"
+      imagePath: Localfiles.handbag,
     ),
   ];
 }

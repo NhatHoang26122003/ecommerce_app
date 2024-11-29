@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screen/auth/login.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -58,21 +59,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           _buildPage(
             context,
-            'assets/images/fashion_shop_1.png',
+            Localfiles.fasion_shop,
             'Choose Products',
             'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. '
                 'Velit officia consequat duis enim velit mollit.',
           ),
           _buildPage(
             context,
-            'assets/images/sales_consulting.png',
+            Localfiles.sales,
             'Make Payment',
             'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. '
                 'Velit officia consequat duis enim velit mollit.',
           ),
           _buildPage(
             context,
-            'assets/images/get_order.png',
+            Localfiles.get_order,
             'Get Your Order',
             'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. '
                 'Velit officia consequat duis enim velit mollit.',

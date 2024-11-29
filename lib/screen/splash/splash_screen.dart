@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
 import 'onboarding_screen.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -39,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             SizedBox(
               child: Image.asset(
-                ('assets/images/logo.png'),
+                Localfiles.logo,
                 fit: BoxFit.contain,
               ),
             ),

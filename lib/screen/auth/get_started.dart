@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screen/home/home_page.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -11,7 +12,7 @@ class GetStartedScreen extends StatelessWidget {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset("assets/images/get_started.png", fit: BoxFit.cover,),
+            child: Image.asset(Localfiles.get_started, fit: BoxFit.cover,),
           ),
           Positioned(
             left: 0,

@@ -4,6 +4,7 @@ import 'package:ecommerce_app/screen/home/components/product_list_view.dart';
 import 'package:ecommerce_app/screen/home/components/sort_filter.dart';
 import 'package:ecommerce_app/screen/home/components/stylish_appbar.dart';
 import 'package:ecommerce_app/screen/home/components/stylish_search.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 import 'components/category_widget.dart';
 import 'components/session_header.dart';
@@ -134,7 +135,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
           SizedBox(
             height: 100,
             width: 100,
-            child: Image.asset("assets/images/special_offer.png", fit: BoxFit.contain,),
+            child: Image.asset(Localfiles.special_offer, fit: BoxFit.contain,),
           ),
           SizedBox(width: 5,),
           Expanded(
@@ -153,7 +154,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       ),
                     ),
                     SizedBox(width: 10,),
-                    Image.asset("assets/images/worry.png", fit: BoxFit.cover,),
+                    Image.asset(Localfiles.worry, fit: BoxFit.cover,),
                   ],
                 ),
                 SizedBox(height: 5,),
@@ -199,7 +200,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             left: -10,
             top: 0,
             bottom: 0,
-            child: Image.asset("assets/images/stars.png", height: 100,),
+            child: Image.asset(Localfiles.stars, height: 100,),
           ),
           Positioned(
             left: 45,
@@ -207,7 +208,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             child: SizedBox(
               height: 120,
               width: 120,
-              child: Image.asset("assets/images/shoes.png", fit: BoxFit.cover,)
+              child: Image.asset(Localfiles.shoes, fit: BoxFit.cover,)
             ),
           ),
           Positioned(
@@ -279,7 +280,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
           ClipRRect(
               borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
               child: Image.asset(
-                "assets/images/hotsummer.png",
+                Localfiles.hotsummer,
                 height: 180,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -353,7 +354,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
             child: ClipRRect(
               borderRadius: BorderRadius.only(topLeft: Radius.circular(15), bottomLeft: Radius.circular(15)),
               child: Image.asset(
-                "assets/images/sponserd.png",
+                Localfiles.sponserd,
                 fit: BoxFit.cover,
               )
             ),

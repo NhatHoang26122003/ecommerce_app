@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/screen/auth/forgot_password.dart';
 import 'package:ecommerce_app/screen/auth/get_started.dart';
 import 'package:ecommerce_app/screen/auth/sign_up.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -133,18 +134,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         // Google
                         InkWell(
                           onTap: () {},
-                          child: Image.asset("assets/images/Google.png", fit: BoxFit.contain,),
+                          child: Image.asset(Localfiles.google, fit: BoxFit.contain,),
                         ),
                         SizedBox(width: 10),
 
                         InkWell(
                           onTap:  () {},
-                          child: Image.asset("assets/images/Apple.png", fit: BoxFit.contain,),
+                          child: Image.asset(Localfiles.apple, fit: BoxFit.contain,),
                         ),
                         SizedBox(width: 10),
                         InkWell(
                           onTap:  () {},
-                          child: Image.asset("assets/images/Facebook.png", fit: BoxFit.contain,),
+                          child: Image.asset(Localfiles.facebook , fit: BoxFit.contain,),
                         )
                       ],
                     ),

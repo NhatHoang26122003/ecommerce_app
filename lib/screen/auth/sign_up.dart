@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/screen/auth/login.dart';
+import 'package:ecommerce_app/utils/localfiles.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/app_color.dart' as AppColor;
 
@@ -183,7 +184,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       InkWell(
                         onTap: () {},
                         child: Image.asset(
-                          "assets/images/Google.png",
+                          Localfiles.google,
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -192,7 +193,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       InkWell(
                         onTap: () {},
                         child: Image.asset(
-                          "assets/images/Apple.png",
+                          Localfiles.apple,
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -200,7 +201,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       InkWell(
                         onTap: () {},
                         child: Image.asset(
-                          "assets/images/Facebook.png",
+                          Localfiles.facebook,
                           fit: BoxFit.contain,
                         ),
                       )

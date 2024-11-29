@@ -1,0 +1,29 @@
+class Localfiles {
+  static const String BaseImageUrl = 'assets/images/';
+  static const String apple = BaseImageUrl + 'Apple.png';
+  static const String avatar = BaseImageUrl + 'avatar.png';
+  static const String banner = BaseImageUrl + 'banner.png';
+  static const String beauty = BaseImageUrl + 'beauty.png';
+  static const String dealList1 = BaseImageUrl + 'dealList_1.png';
+  static const String dealList2 = BaseImageUrl + 'dealList_2.png';
+  static const String facebook = BaseImageUrl + 'Facebook.png';
+  static const String fashion = BaseImageUrl + 'fashion.png';
+  static const String fasion_shop = BaseImageUrl + 'fashion_shop_1.png';
+  static const String get_order  = BaseImageUrl + 'get_order.png';
+  static const String get_started = BaseImageUrl + 'get_started.png';
+  static const String google = BaseImageUrl + 'Google.png';
+  static const String handbag = BaseImageUrl + 'handpad.png';
+  static const String hotsummer = BaseImageUrl + 'hotsummer.png';
+  static const String iwc = BaseImageUrl + 'iwc.png';
+  static const String kids = BaseImageUrl + 'kids.png';
+  static const String logo = BaseImageUrl + 'logo.png';
+  static const String men = BaseImageUrl + 'men.png';
+  static const String sales = BaseImageUrl + 'sales_consulting.png';
+  static const String shoes = BaseImageUrl + 'shoes.png';
+  static const String sneaker = BaseImageUrl + 'sneaker.png';
+  static const String special_offer = BaseImageUrl + 'special_offer.png';
+  static const String sponserd = BaseImageUrl + 'sponserd.png';
+  static const String stars = BaseImageUrl + 'stars.png';
+  static const String women = BaseImageUrl + 'women.png';
+  static const String worry = BaseImageUrl + 'worry.png';
+}
