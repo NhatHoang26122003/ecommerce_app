@@ -39,8 +39,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
 
   void _onShoppingCartTapped() {
     setState(() {
-      _currentIndex = 4;
-      _isShoppingCartSelected = !_isShoppingCartSelected;
+      if (!_isShoppingCartSelected) {
+        _currentIndex = 4;
+        _isShoppingCartSelected = true;
+      }
     });
   }
   @override
