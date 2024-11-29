@@ -13,7 +13,8 @@ class SessionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+      margin: const EdgeInsets.only(right: 15),
+      padding: EdgeInsets.symmetric(horizontal:12, vertical: 12),
       decoration: BoxDecoration(
         color: colorBackground,
         borderRadius: BorderRadius.circular(10),
@@ -29,9 +30,9 @@ class SessionHeader extends StatelessWidget {
               SizedBox(height: 8,),
               Row (
                 children: [
-                  icon != null ? Icon(icon, color: Colors.white, size: 15,) : SizedBox.shrink(),
+                  icon != null ? Icon(icon, color: Colors.white, size: 14,) : SizedBox.shrink(),
                   SizedBox(width: 5,),
-                  Text (timeLine, style: TextStyle(fontSize: 15, color: Colors.white))
+                  Text (timeLine, style: TextStyle(fontSize: 14, color: Colors.white))
                 ],
               ),
             ],
